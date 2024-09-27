@@ -12,22 +12,28 @@ class User {
         std::vector<User*> friendList;
         
     public:
+        //Constructor and Deconstructor
+        User::User(); //Creates an empty User object with empty friendList of 100
+        User::User(std::vector<User*> friendList); //Creates 
+        User::~User();
+
         //Setters and Getters for UserName and Email
-        void setUserName(std::string userName);
+        void User::setUserName(std::string userName);
 
-        void setEmail(std::string username);
+        void User::setEmail(std::string username);
 
-        std::string getUserName();
+        std::string User::getUserName();
 
-        std::string getEmail();
+        std::string User::getEmail();
 
-        void addFriend(User*); //take a user pointer and add to friendList
+        //Class Functions
+        void User::addFriend(User*); //take a User pointer and add to friendList
 
-        void removeFriend(std::string userName); //take username as string and remove from friendList
+        void User::removeFriend(std::string userName); //take username as string and remove from friendList
         
-        int numFriend(); //return number of friends in friendList
+        int User::numFriend(); //return number of friends in friendList
         
-        User* getFriendAt(int index); //return user pointer when given an index position
+        User* User::getFriendAt(int index); //return user pointer when given an index position
 };
 
 #endif
